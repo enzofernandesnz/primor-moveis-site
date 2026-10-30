@@ -1,0 +1,1 @@
+export default function robots(){return {rules:{userAgent:'*',allow:'/'},sitemap:'https://primor-moveis-bh.jaunty-llama-6894.chatgpt.site/sitemap.xml'}}

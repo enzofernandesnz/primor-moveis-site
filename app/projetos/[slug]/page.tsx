@@ -1,0 +1,3 @@
+import Site from '../../site';import projects from '../../projects.json';import {notFound} from 'next/navigation';
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const p=projects.find(p=>p.key.toLowerCase()===slug);return {title:p?.title||'Projeto',description:p?.description}}
+export default async function Page({params}:{params:Promise<{slug:string}>}){const {slug}=await params;if(!projects.some(p=>p.key.toLowerCase()===slug))notFound();return <Site page="detalhe" slug={slug}/>}

@@ -1,0 +1,1 @@
+import projects from './projects.json';export default function sitemap(){return ['','/projetos','/sobre','/contato','/privacidade',...projects.map(p=>'/projetos/'+p.key.toLowerCase())].map(path=>({url:'https://primor-moveis-bh.jaunty-llama-6894.chatgpt.site'+path}))}
